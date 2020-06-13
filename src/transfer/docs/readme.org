@@ -1,0 +1,9 @@
+* Introduction
+
+The purpose of this library is to transfer completed projects
+from the projects management section to the file containing all completed projects.
+
+* Notes
+
+The configuration file is expected to be in "~/emacs-config.json".
+The program assumes that /var/log/emacs-external/transfer/log.txt exists.

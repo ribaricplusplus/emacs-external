@@ -1,0 +1,1 @@
+-Wall main.c cJSON.c -iquote include -o ../../bin/transfer
