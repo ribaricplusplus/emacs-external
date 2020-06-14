@@ -4,21 +4,27 @@
 #include <string.h>
 #include "cJSON.h"
 
-void writeToCompleted(char* NOTEBOOK_PATH, FILE* flog){
-  FILE* fCompleted = fopen(strcat(NOTEBOOK_PATH, "/management/completed.org"), "a");
+int writeToCompleted(char* NOTEBOOK_PATH, FILE* flog){
+  char* completedPath = malloc(strlen(NOTEBOOK_PATH)+strlen("management/completed.org")+1);
+  memcpy(completedPath, NOTEBOOK_PATH, strlen(NOTEBOOK_PATH));
+  strcat(completedPath, "/management/completed.org");
+  FILE* fCompleted = fopen(completedPath, "a");
   if (fCompleted == NULL){
     fprintf(flog, "Failed to open completed.org");
+    return -1;
   }
+  fprintf(flog, "Writing into %s", completedPath);
   int ch = fgetc(stdin);
   while (ch != -1){
     fputc(ch, fCompleted);
     ch = fgetc(stdin);
   }
   fclose(fCompleted);
+  free(completedPath);
+  return 0;
 }
 
 int main(void){
-  printf("Program starting.");
   char* home = getenv("HOME");
   char* fpath = strcat(home, "/.emacs-config.json");
   FILE* fp = fopen(fpath, "r");
@@ -43,7 +49,11 @@ int main(void){
   cJSON* json = cJSON_Parse(contents);
   cJSON* NOTEBOOK_PATH = cJSON_GetObjectItem(json, "NOTEBOOK_PATH");
   fprintf(flog, "Notebook path ought to be %s\n", NOTEBOOK_PATH->valuestring);
-  writeToCompleted(NOTEBOOK_PATH->valuestring, flog);
+  int retval = writeToCompleted(NOTEBOOK_PATH->valuestring, flog);
+  if (retval == -1){
+    printf("Failed to write into completed.org");
+    return 1;
+  }
   free(json);
   free(contents);
   free(fpinfo);
