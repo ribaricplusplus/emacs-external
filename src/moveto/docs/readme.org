@@ -1,0 +1,11 @@
+* Introduction
+
+Moveto is used for management. It moves whatever is marked as a region to the appropriate
+file.
+
+* Notes
+
+- It is expected that there is a config file ~/.emacs-config.json.
+- Config file must contain NOTEBOOK_PATH which points to the root of the Notebook.
+- The project depends on cJSON: https://github.com/DaveGamble/cJSON
+

@@ -7,3 +7,6 @@ from the projects management section to the file containing all completed projec
 
 The configuration file is expected to be in "~/emacs-config.json".
 The program assumes that /var/log/emacs-external/transfer/log.txt exists.
+* Dependencies
+
+- cJSON: https://github.com/DaveGamble/cJSON
