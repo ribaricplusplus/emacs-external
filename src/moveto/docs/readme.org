@@ -8,4 +8,5 @@ file.
 - It is expected that there is a config file ~/.emacs-config.json.
 - Config file must contain NOTEBOOK_PATH which points to the root of the Notebook.
 - The project depends on cJSON: https://github.com/DaveGamble/cJSON
-
+- Logs go to /var/log/emacs-external/moveto/log.txt
+- Log directory /var/log/emacs-external/moveto needs to exist and permissions need to be set to a+rw.

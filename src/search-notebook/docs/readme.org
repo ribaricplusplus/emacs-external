@@ -1,0 +1,17 @@
+* Purpose
+
+Easily search through Notebook with standard settings for underlying utilities such as find and grep.
+
+* Installation
+
+- Run `node install.js`
+- Path to node binary must be in emacs exec-path. Recommended to put node in emacs-external/bin
+
+* Notes
+
+- Tested with Node v14.4
+- Path to node binary must be in emacs exec path.
+* Improvements
+
+- Instead of running find every single time, just periodically update a list of all files
+- Add possibility to search within certain notebook / period / category
