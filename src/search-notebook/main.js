@@ -28,7 +28,7 @@ if (NOTEBOOK_PATH === undefined){
   process.exit(1)
 }
 // Exclude .zim files and everything in .git directory. Other than that, search all notebook files.
-const STANDARD_FIND_ARGS = [NOTEBOOK_PATH, '-not', '-iregex', '.*zim$', '-and', '-not', '-iregex', '.*?git/.*', '-and', '-type', 'f', '-print']
+const STANDARD_FIND_ARGS = [NOTEBOOK_PATH, '-not', '-iregex', '.*zim$', '-and', '-not', '-iregex', '.*?git/.*', '-and', '-not', '-iregex', '.*\\.code$', '-and', '-type', 'f', '-print']
 
 // Find all matching files
 if (process.argv[2] === undefined){
