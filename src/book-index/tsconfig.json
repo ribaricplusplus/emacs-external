@@ -1,0 +1,9 @@
+{
+  "compilerOptions":{
+    "strict": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "experimentalDecorators": true
+  },
+  "files": ["main.ts"],
+}
