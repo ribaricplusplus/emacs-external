@@ -1,6 +1,6 @@
 # Introduction
 
-Whenever I read something from a book, I write down a source. This is useful so that later on I can remind myself of the books I've read and the key lessons from them.
+Whenever I read something from a book, I write down the notes and the name of the book. This is useful so that later on I can remind myself of the books I've read and the key lessons from them.
 Categorizing books is no fun at all, thus, instead of doing that, whenever I read something from a particular source, amongs all other notes I write down
 the book author and title in a particular way so that I can locate all the books I've read.
 
@@ -21,3 +21,7 @@ SECOND BOOK NAME AND AUTHORS
 File-where-notes-about-the-book-are-1
 File-where-notes-about-the-book-are-2
 ~~~
+
+# Installation
+
+`node install.js` Creates a link in the binary directory.
