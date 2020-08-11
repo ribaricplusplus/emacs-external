@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp -a script.php $HOME/.emacs.d/external/bin/bno-videos
+
