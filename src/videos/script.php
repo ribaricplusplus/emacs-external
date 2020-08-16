@@ -14,7 +14,7 @@ if ($config_contents === false) {
 }
 $config = json_decode($config_contents, true);
 define("NOTEBOOK_PATH", $config["NOTEBOOK_PATH"]);
-$files = shell_exec("find " . NOTEBOOK_PATH . " -type f -iname videos.txt -or -iname video.txt");
+$files = shell_exec("find " . NOTEBOOK_PATH . " -type f -iname 'videos.*' -or -iname 'video.*'");
 $files_array = explode("\n", $files);
 
 // Array of arrays, associating access times with path names
