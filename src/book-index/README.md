@@ -24,4 +24,4 @@ File-where-notes-about-the-book-are-2
 
 # Installation
 
-`node install.js` Creates a link in the binary directory.
+`gulp install` Creates a link in the binary directory.

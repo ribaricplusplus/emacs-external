@@ -9,3 +9,7 @@ All files that are not regular files, and that end in .js, .json, .code are igno
 
 - ~/.emacs-config.json exists and contains NOTEBOOK_PATH
 - Notes are written in the format dirty/2020/06/01. Note that zero padding happens.
+
+# Installation
+
+`node install.js`

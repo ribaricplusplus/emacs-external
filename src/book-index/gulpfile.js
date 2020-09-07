@@ -22,7 +22,7 @@ function buildProject(watch){
 function install(done){
   buildProject(false)
   const HOME = process.env.HOME
-  const args = `-s ${path.join(__dirname, 'dist', 'main.js')} ${path.join(HOME, 'emacs-external', 'bin', BINARY_NAME)}`
+  const args = `-s ${path.join(__dirname, 'dist', 'main.js')} ${path.join(HOME, '.emacs.d', 'external', 'bin', BINARY_NAME)}`
   const data = cp.spawnSync('ln', args.split(' '), {encoding: 'utf8'})
   if (data.status !== 0){
     console.error('An error occurred while installing')
